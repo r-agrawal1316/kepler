@@ -1,0 +1,88 @@
+* {
+  /* background-color: black; */
+  width: 100%;
+  /* background-image: url(https://img.freepik.com/free-vector/realistic-galaxy-background_23-2148991322.jpg); */
+  /* background-size: cover; */
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.planet-info {
+  position: absolute;
+  right: 40px;
+  top: 80px;
+  background-color: rgba(98, 98, 98, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 0 4px 8px rgba(232, 100, 255, 0.57);
+}
+
+.close-button {
+  position: absolute;
+  font-size: 25px;
+  top: 35px;
+  right: -140px;
+  background: transparent;
+  border: none;
+  color: white;
+  /* font-size: 20px; */
+  /* cursor: pointer; */
+}
+
+.close-button:hover {
+  color: red;
+  font-size: 30px;
+}
+
+.headText {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  /* margin-left: 90px; */
+  font-family: cursive;
+  color: rgb(255, 191, 107);
+}
+.headText:hover {
+  color: rgb(50, 151, 229);
+}
+
+.paraText {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.planet-info.hide {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
